@@ -1,6 +1,6 @@
 #include <sys/time.h>
 #include <stdlib.h>
-#include "utils.h"
+#include <utils/utils.h>
 
 // current time
 double wtime() {

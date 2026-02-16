@@ -1,3 +1,5 @@
+#include "search.h"
+
 int linear_search(const int *arr, size_t n, int x) {
   for (size_t i=0; i<n; i++) if (*(arr+i) == x) return i;
   return -1;

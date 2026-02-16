@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "sort.h"
 
 void merge(int *arr, int left, int mid, int right, int *tmp) {
   size_t i=0, j=0;
