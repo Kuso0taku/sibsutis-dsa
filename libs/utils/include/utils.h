@@ -1,3 +1,3 @@
-double witime();
+double wtime();
 int getrand(int, int);
-int* fillarr(int*, size_t, int, int);
+int* fillarr(int*, int, int, int);

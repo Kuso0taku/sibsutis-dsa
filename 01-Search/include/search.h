@@ -1,3 +1,3 @@
-int linear_search(const int, size_t, int);
-int binary_search(const int, size_t, int);
-int exp_search(const int, size_t, int);
+int linear_search(const int*, int, int);
+int binary_search(const int*, int, int);
+int exp_search(const int*, int, int);
