@@ -35,7 +35,7 @@ awk -v outdir="$OUT_DIR" '
     # Состояние HEADER: встретили название таблицы – пропускаем и открываем новый файл
     state == "HEADER" {
         count++
-        current_file = outdir "/tables" count ".csv"
+        current_file = outdir "/table" count ".csv"
         state = "DATA"             # теперь пишем данные
         next
     }
