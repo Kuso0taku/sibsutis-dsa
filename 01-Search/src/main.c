@@ -18,46 +18,48 @@ int main() {
   merge_sort(sorted, n);
   
   double t=0;
-  int x=0;
-  int n1 = 100;
-  long long n2 = pow(10, 7);
+  //int x=0;
+  int n1 = 1000;
+  long long n2 = pow(10, 6);
+  int* srch = (int*)malloc(n2 * sizeof(int));
 
   printf("\tTABLE 1\n");
   printf("#,array_size,linear,binary,exp\n");
   for (int i=1; i<=20; i++) {
     n = 250000*i;
-    x = *(arr + rand()%n);
+    // x = *(arr + rand()%n);
 
     printf("%d,%d,", i,n);
     
+    //for (int j=0; j<=n2; j++) *(srch+j) = *(sorted + rand()%n);
+
     t = wtime();
     for (int j=0; j<n1; j++) {
-      linear_search(sorted, n, x);
+      linear_search(sorted, n, *(arr+j));
     }
     t = (wtime() - t)/n1;
     printf("%.9lf,", t);
 
     t = wtime();
     for (int j=0; j<n2; j++) {
-      binary_search(sorted, n, x);
+      binary_search(sorted, n, *(arr+j));
     }
     t = (wtime() - t)/n2;
     printf("%.9lf,", t);
 
     t = wtime();
     for (int j=0; j<n2; j++) {
-      exp_search(sorted, n, x);
+      exp_search(sorted, n, *(arr+j));
     }
     t = (wtime() - t)/n2;
     printf("%.9lf\n", t);
   }
-  
-  free(sorted);
 
+  free(sorted);
+  
   printf("\n\tTABLE 2\n");
   printf("#,array_size,sort,n_search,linear,binary,sort+binary\n");
   
-  int* srch = (int*)malloc(1000 * sizeof(int));
   n = 1000000;
   double st=0;
 
@@ -71,7 +73,7 @@ int main() {
     st = (wtime() - st);
     printf("%.9lf,", st);
 
-    for (int j=1; j<=i*50; j++) *(srch+j) = *(arr + rand()%n);
+    for (int j=0; j<=i*50; j++) *(srch+j) = *(arr + rand()%n);
 
     t = wtime();
     for (int j=0; j<i*50; j++) {
