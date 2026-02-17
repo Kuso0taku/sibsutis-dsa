@@ -27,7 +27,7 @@ plt.plot(sizes, exp, "s-", color="green", label="Exponential", markersize=4,
 # Oy
 plt.yscale('log')
 
-y_ticks = [0.1, 0.2, 1.0, 4.0, 16.0, 64.0, 256.0, 1024.0, 4096.0]
+y_ticks = [0.2, 1.0, 4.0, 16.0, 64.0, 256.0, 1024.0, 4096.0]
 plt.yticks(y_ticks, [str(y) for y in y_ticks])
 #plt.ylim(0.1, 5000)
 

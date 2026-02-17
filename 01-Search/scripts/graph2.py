@@ -23,7 +23,7 @@ plt.plot(sizes, exp, "o-", color="blue", label="Exponential", markersize=4,
 # Oy
 plt.yscale('log')
 
-y_ticks = [i/100 for i in range(6, 16)]
+y_ticks = [i/100 for i in range(10, 75, 5)]
 plt.yticks(y_ticks, [str(y) for y in y_ticks])
 
 # Ox
