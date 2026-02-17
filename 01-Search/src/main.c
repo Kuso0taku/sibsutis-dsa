@@ -66,7 +66,7 @@ int main() {
   double st=0;
 
   for (int i=1; i<=10; i++) {
-    printf("%d,%d,%d,", i, n, i%50);
+    printf("%d,%d,%d,", i, n, i*50);
 
     fillarr(arr, n, 0, 10000000);
     
@@ -97,7 +97,7 @@ int main() {
   n = 5000000;
 
   for (int i=1; i<=10; i++) {
-    printf("%d,%d,%d,", i+10, n, i%100);
+    printf("%d,%d,%d,", i+10, n, i*100);
 
     fillarr(arr, n, 0, 10000000);
     
