@@ -35,7 +35,7 @@ plt.yticks(y_ticks, [str(y) for y in y_ticks])
 plt.xticks(sizes, [str(int(x)) for x in sizes])
 plt.xlim(250, 5000)
 plt.xlabel("Количество элементов в массиве, тыс")
-plt.ylabel("Время выполнения, нс")
+plt.ylabel("Время выполнения, мкс")
 
 # grid
 plt.grid(True, which='both', linestyle='--', linewidth=0.5, color='grey', alpha=0.7)
@@ -44,11 +44,11 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5, color='grey', alpha=
 plt.legend()
 
 # title
-plt.title('Рисунок 1. Зависимость времени выполнения алгоритмов поиска элемента в массиве от количества элементов в массиве')
+#plt.title('Рисунок 1. Зависимость времени выполнения алгоритмов поиска элемента в массиве от количества элементов в массиве')
+
+# save
+plt.savefig("../out/graph1.png", dpi=175)
 
 # display
 plt.tight_layout()
 plt.show()
-
-# save
-plt.savefig("../out/graph1.png")
