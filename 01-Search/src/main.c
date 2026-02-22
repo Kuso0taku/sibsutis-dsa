@@ -13,7 +13,7 @@ int main() {
   int n = 5000000;
   int* arr = (int*)malloc(n * sizeof(int));
   int* sorted = (int*)malloc(n * sizeof(int));
-  fillarr(arr, n, 0, 10000000);
+  fillarr_int(arr, n, 0, 10000000);
   memcpy(sorted, arr, n * sizeof(int));
   merge_sort(sorted, n);
   
@@ -28,7 +28,7 @@ int main() {
   for (int i=1; i<=20; i++) {
     n = 250000*i;
 
-    fillarr(arr, n, 0, 10000000);
+    fillarr_int(arr, n, 0, 10000000);
     memcpy(sorted, arr, n * sizeof(int));
     merge_sort(sorted, n);
     for (int j=0; j<n2; j++) *(srch+j) = *(sorted + rand()%n);
@@ -68,7 +68,7 @@ int main() {
   for (int i=1; i<=10; i++) {
     printf("%d,%d,%d,", i, n, i*50);
 
-    fillarr(arr, n, 0, 10000000);
+    fillarr_int(arr, n, 0, 10000000);
     
     st = wtime();
     merge_sort(arr, n);
@@ -99,7 +99,7 @@ int main() {
   for (int i=1; i<=10; i++) {
     printf("%d,%d,%d,", i+10, n, i*100);
 
-    fillarr(arr, n, 0, 10000000);
+    fillarr_int(arr, n, 0, 10000000);
     
     st = wtime();
     merge_sort(arr, n);
