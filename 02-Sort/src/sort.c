@@ -2,6 +2,7 @@
 #include <string.h> // memcpy
 #include "../include/sort.h"
 
+// heap sort
 void counting_sort(uint32_t* arr, size_t n, uint32_t* tmp, uint8_t shift) {
   enum {BITS = 8, RADIX = 1 << BITS, MASK = RADIX - 1}; // make constants
 
@@ -42,6 +43,7 @@ void radix_sort(uint32_t* arr, size_t n) {
   free(tmp);
 }
 
+// merge sort
 void merge(uint32_t* arr, size_t left, size_t mid, size_t right, uint32_t *tmp) {
   size_t i=0, j=0;
 
@@ -75,4 +77,34 @@ void merge_sort(uint32_t* arr, size_t n) {
     }
 
   free(tmp);
+}
+
+// heap sort
+void heapify(uint32_t* arr, size_t n, size_t i) {
+  size_t max=i, left = 2*i + 1, right = 2*i + 2;
+
+  if (left < n && *(arr + left) > *(arr + max)) max = left;
+  if (right < n && *(arr + right) > *(arr + max)) max = right;
+
+  if (max != i) {
+    uint32_t tmp = *(arr+i);
+    *(arr + i) = *(arr + max);
+    *(arr + max) = tmp;
+    heapify(arr, n, max);
+  }
+}
+
+void build_heap(uint32_t* arr, size_t n) {
+  for (size_t i = n/2; i>0; i--) heapify(arr, n, i-1);
+}
+
+void heap_sort(uint32_t* arr, size_t n) {
+  build_heap(arr, n);
+  uint32_t tmp=0;
+  for (size_t i = n-1; i>0; i--) {
+    tmp = *arr;
+    *(arr + 0) = *(arr + i);
+    *(arr + i) = tmp;
+    heapify(arr, i, 0);
+  }
 }
