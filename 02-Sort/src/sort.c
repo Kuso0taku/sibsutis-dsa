@@ -81,16 +81,16 @@ void merge_sort(uint32_t* arr, size_t n) {
 
 // heap sort
 void heapify(uint32_t* arr, size_t n, size_t i) {
-  size_t max=i, left = 2*i + 1, right = 2*i + 2;
+  size_t mx=i, left = 2*i + 1, right = 2*i + 2;
 
-  if (left < n && *(arr + left) > *(arr + max)) max = left;
-  if (right < n && *(arr + right) > *(arr + max)) max = right;
+  if (left < n && *(arr + left) > *(arr + mx)) mx = left;
+  if (right < n && *(arr + right) > *(arr + mx)) mx = right;
 
-  if (max != i) {
+  if (mx != i) {
     uint32_t tmp = *(arr+i);
-    *(arr + i) = *(arr + max);
-    *(arr + max) = tmp;
-    heapify(arr, n, max);
+    *(arr + i) = *(arr + mx);
+    *(arr + mx) = tmp;
+    heapify(arr, n, mx);
   }
 }
 
@@ -106,5 +106,29 @@ void heap_sort(uint32_t* arr, size_t n) {
     *(arr + 0) = *(arr + i);
     *(arr + i) = tmp;
     heapify(arr, i, 0);
+  }
+}
+
+// selection sort
+size_t min(uint32_t* arr, size_t n) {
+  uint32_t mi = *arr;
+  size_t i=0;
+  for (size_t j=1; j<n; j++) {
+    if (*(arr+j)<mi) {
+      i=j;
+      mi = *(arr+i);
+    }
+  }
+  return i;
+}
+
+void selection_sort(uint32_t* arr, size_t n) {
+  size_t mi = 0;
+  uint32_t tmp=0;
+  for (size_t i=0; i<n; i++) {
+    mi = min(arr+i, n-i)+i;
+    tmp = *(arr+mi);
+    *(arr+mi) = *(arr+i);
+    *(arr+i) = tmp;
   }
 }
