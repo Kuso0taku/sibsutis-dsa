@@ -1,5 +1,6 @@
 #include <time.h>
 #include <stdlib.h>
+#include <inttypes.h>
 #include <utils.h>
 
 // current time
@@ -14,7 +15,7 @@ int getrand_int(int min, int max) {
   return (double)rand() / (RAND_MAX + 1.0) * (max - min) + min;
 }
 
-uint32_t getrand_uint32(uint32_t min, uint32_t max) {
+uint32_t getrand_uint32_t(uint32_t min, uint32_t max) {
   return (double)rand() / (RAND_MAX + 1.0) * (max - min) + min;
 }
 
@@ -25,8 +26,8 @@ int* fillarr_int(int* arr, size_t n, int min, int max) {
   return arr;
 }
 
-uint32_t* fillarr_uint32(uint32_t* arr, size_t n, uint32_t min, uint32_t max) {
+uint32_t* fillarr_uint32_t(uint32_t* arr, size_t n, uint32_t min, uint32_t max) {
   if (n==0) return NULL;
-  for (size_t i=0; i<n; i++) *(arr+i) = getrand_uint32(min, max);
+  for (size_t i=0; i<n; i++) *(arr+i) = getrand_uint32_t(min, max);
   return arr;
 }

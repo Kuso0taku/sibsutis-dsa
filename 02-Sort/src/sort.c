@@ -1,6 +1,6 @@
 #include <stdlib.h> // malloc, free
 #include <string.h> // memcpy
-#include "../include/sort.h"
+#include <sort.h>
 
 // heap sort
 void counting_sort(uint32_t* arr, size_t n, uint32_t* tmp, uint8_t shift) {
