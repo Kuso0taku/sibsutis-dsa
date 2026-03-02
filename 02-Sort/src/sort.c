@@ -2,7 +2,7 @@
 #include <string.h> // memcpy
 #include <sort.h>
 
-// heap sort
+// radix sort
 void counting_sort(uint32_t* arr, size_t n, uint32_t* tmp, uint8_t shift) {
   enum {BITS = 8, RADIX = 1 << BITS, MASK = RADIX - 1}; // make constants
 
