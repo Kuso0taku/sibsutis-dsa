@@ -48,7 +48,7 @@ void merge(uint32_t* arr, size_t left, size_t mid, size_t right, uint32_t *tmp) 
   size_t i=0, j=0;
 
   while (left+i < mid && mid+j < right) {
-    if (*(arr + left+i) < *(arr + mid+j)) {
+    if (*(arr + left+i) <= *(arr + mid+j)) {
       *(tmp + i+j) = *(arr + left+i);
       i++;
     } else {
