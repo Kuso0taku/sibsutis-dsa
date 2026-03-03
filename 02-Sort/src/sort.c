@@ -99,11 +99,12 @@ void build_heap(uint32_t* arr, size_t n) {
 }
 
 void heap_sort(uint32_t* arr, size_t n) {
+  if (n<2) return;
   build_heap(arr, n);
   uint32_t tmp=0;
   for (size_t i = n-1; i>0; i--) {
     tmp = *arr;
-    *(arr + 0) = *(arr + i);
+    *arr = *(arr + i);
     *(arr + i) = tmp;
     heapify(arr, i, 0);
   }
@@ -123,6 +124,7 @@ size_t min(uint32_t* arr, size_t n) {
 }
 
 void selection_sort(uint32_t* arr, size_t n) {
+  if (n<2) return;
   size_t mi = 0;
   uint32_t tmp=0;
   for (size_t i=0; i<n; i++) {
