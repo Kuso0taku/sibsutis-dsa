@@ -36,7 +36,7 @@ uint32_t* fillarr_uint32_t(uint32_t* arr, size_t n, uint32_t min, uint32_t max) 
   return arr;
 }
 
-double* fillarr_int(double* arr, size_t n, double min, double max) {
+double* fillarr_double(double* arr, size_t n, double min, double max) {
   if (n==0) return NULL;
   for (size_t i=0; i<n; i++) *(arr+i) = getrand_double(min, max);
   return arr;
