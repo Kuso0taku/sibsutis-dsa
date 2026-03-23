@@ -4,5 +4,7 @@
 double wtime();
 int getrand_int(int, int);
 uint32_t getrand_uint32_t(uint32_t, uint32_t);
+double getrand_double(double, double);
 int* fillarr_int(int*, size_t, int, int);
 uint32_t* fillarr_uint32_t(uint32_t*, size_t, uint32_t, uint32_t);
+double* fillarr_int(double*, size_t, double, double);

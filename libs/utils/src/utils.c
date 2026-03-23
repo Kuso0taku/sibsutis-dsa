@@ -19,6 +19,10 @@ uint32_t getrand_uint32_t(uint32_t min, uint32_t max) {
   return (double)rand() / (RAND_MAX + 1.0) * (max - min) + min;
 }
 
+double getrand_double(double min, double max) {
+  return (double)rand() / (RAND_MAX + 1.0) * (max - min) + min;
+}
+
 // fill the array with random numbers
 int* fillarr_int(int* arr, size_t n, int min, int max) {
   if (n==0) return NULL;
@@ -29,5 +33,11 @@ int* fillarr_int(int* arr, size_t n, int min, int max) {
 uint32_t* fillarr_uint32_t(uint32_t* arr, size_t n, uint32_t min, uint32_t max) {
   if (n==0) return NULL;
   for (size_t i=0; i<n; i++) *(arr+i) = getrand_uint32_t(min, max);
+  return arr;
+}
+
+double* fillarr_int(double* arr, size_t n, double min, double max) {
+  if (n==0) return NULL;
+  for (size_t i=0; i<n; i++) *(arr+i) = getrand_double(min, max);
   return arr;
 }
