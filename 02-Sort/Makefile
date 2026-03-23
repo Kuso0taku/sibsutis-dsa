@@ -1,4 +1,4 @@
-# Makefile для 01-Search
+# Makefile для 02-Sort
 ROOT = ..
 CC = gcc
 CFLAGS = -O0 -Wall -Wextra -Iinclude -I$(ROOT)/libs/utils/include -MMD
@@ -10,7 +10,7 @@ BIN_DIR = $(BUILD_DIR)/bin
 OBJ_DIR = $(BUILD_DIR)/obj
 
 # Целевой исполняемый файл
-TARGET = $(BIN_DIR)/search
+TARGET = $(BIN_DIR)/sort
 
 # Категории объектных файлов
 MAIN_OBJ_DIR = $(OBJ_DIR)/main
