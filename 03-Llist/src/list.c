@@ -11,7 +11,7 @@ void list_add(struct list_head* new, struct list_head* head) {
   struct list_head* next = head->next;
   next->prev = new;
   new->next = next;
-  new->prev = prev;
+  new->prev = head;
   head->next = new;
 }
 
@@ -20,7 +20,7 @@ void list_add_tail(struct list_head* new, struct list_head* head) {
   struct list_head* prev = head->prev;
   prev->next = new;
   new->prev = prev;
-  new->next = next;
+  new->next = head;
   head->prev = new;
 }
 
