@@ -30,7 +30,7 @@ Hashtable functions in `hashtab.{h,c}`:
 ## Variant №4 (mine)
 - [Experiment 1](##experiment-1-lookup-efficiency-comparing-avg-case).
 - [Experiment 5](##experiment-5-lookup-efficiency-best-avg-and-worst-cases).
-- [Experiment 6](##experiment-6-hash-functions) - Hash-functions KP, ELF.
+- [Experiment 6](##experiment-6-hash-functions) - Hash-functions KP, Jenkins.
 
 ## Experiment 1. Lookup efficiency comparing (avg case).  
 - Fill [Table 2](##table-2)  
@@ -60,12 +60,12 @@ Hashtable functions in `hashtab.{h,c}`:
 
 ## Experiment 6. Hash functions.  
 - Fill [Table 7](##table-7)  
-- Plot graphs `t = lookup(n)` for X and Y functions, where X = KP, Y = ELF.  
+- Plot graphs `t = lookup(n)` for X and Y functions, where X = KP, Y = Jenkins.  
 - Graphs `q = f(n)`
 
 ## Table 7  
 ```
-#,n,hashtab_lookup(s)-KP,collisions-KP,hashtab_lookup(s)-ELF,collisions-ELF
+#,n,hashtab_lookup(s)-KP,collisions-KP,hashtab_lookup(s)-Jenkins,collisions-Jenkins
 1,20000,_,_
 2,40000,_,_
 ...,...,_,_
