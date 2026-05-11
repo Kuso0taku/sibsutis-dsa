@@ -39,3 +39,12 @@ struct minheap *minheap_delete(struct minheap *heap, int key);
 ...,...,...,...
 8,400000,...,...
 ```
+
+## Rewiew questions
+- What is a priority queue?
+- Priority queue implementation options.
+- Explanation of how binary heap functions work.
+- Computational complexity of binary heap operations.
+- Merge two heaps.
+- How to add elements to a binary heap?
+- Applications of a binary heap.
