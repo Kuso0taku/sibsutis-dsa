@@ -23,7 +23,7 @@ plt.plot(sizes, rbtree_max, "x-", color="red", label="rbtree_max_worst", markers
 # Oy
 plt.yscale('log')
 
-y_ticks = [0.02, 0.05, 0.1, 0.5, 1, 5, 10, 50]
+y_ticks = [0.03, 0.05, 0.1, 0.5, 1, 5, 10, 50, 250, 1000, 5000]
 plt.yticks(y_ticks, [str(y) for y in y_ticks])
 
 # Ox
