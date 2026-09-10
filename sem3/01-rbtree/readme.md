@@ -1,6 +1,6 @@
 # Red-black tree.  
 
-Information about BSTrees research avaliable here [04-BST_hashtable](/home/denchik/unit_731/sibsutis/dsa/sem2/04-BST_hashtable/readme.md).  
+Information about BSTrees research avaliable here [04-BST_hashtable]().  
 This research uses BSTree from that.  
 
 ## Constraints
