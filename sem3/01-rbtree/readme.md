@@ -32,7 +32,7 @@ BST functions in `bstree.{h,c}`:
 10,200'000,_,_,_,_
 ```
 
-## Table 6  
+## Table 2  
 ```
 #,n,bstree_max_avg,rbtree_max_avg,bstree_max_worst,bstree_max_worst
 1,20'000,_,_,_,_
