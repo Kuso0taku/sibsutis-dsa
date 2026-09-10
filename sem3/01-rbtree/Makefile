@@ -1,5 +1,5 @@
 # Makefile для 01-rbtree
-ROOT = ..
+ROOT = ../..
 CC = gcc
 CFLAGS = -O0 -Wall -Wextra -Iinclude -I$(ROOT)/libs/utils/include -MMD
 LDFLAGS =
