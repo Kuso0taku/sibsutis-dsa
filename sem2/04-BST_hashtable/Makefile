@@ -1,5 +1,5 @@
 # Makefile для 04-bst-hashtable
-ROOT = ..
+ROOT = ../..
 CC = gcc
 CFLAGS = -O0 -Wall -Wextra -Iinclude -I$(ROOT)/libs/utils/include -MMD
 LDFLAGS =
